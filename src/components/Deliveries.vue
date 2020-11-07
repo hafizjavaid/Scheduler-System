@@ -1,54 +1,22 @@
 <template>
-  <div>
-    <section class="deliveries">
-      <div class="deliveries_inner">
-        <v-container>
-          <div class="delivery_cards">
-            <div
-              class="single_card"
-              v-for="(delivery, i) in deliveries"
-              :key="i"
-            >
-              <span class="d_icon" v-html="delivery.svg">
-                {{ delivery.svg }}
-              </span>
-              <h3>{{ delivery.title }}</h3>
-              <p v-html="delivery.detail">
-                {{ delivery.detail }}
-              </p>
-              <span v-html="delivery.svg1" class="d_arraow">
-                {{ delivery.svg1 }}
-              </span>
-            </div>
-          </div>
-        </v-container>
+  <section class="deliveries">
+    <v-container>
+      <div class="delivery_cards">
+        <div class="single_card" v-for="(delivery, i) in deliveries" :key="i">
+          <span class="d_icon" v-html="delivery.svg">
+            {{ delivery.svg }}
+          </span>
+          <h3>{{ delivery.title }}</h3>
+          <p v-html="delivery.detail">
+            {{ delivery.detail }}
+          </p>
+          <span v-html="delivery.svg1" class="d_arraow">
+            {{ delivery.svg1 }}
+          </span>
+        </div>
       </div>
-    </section>
-    <section class="deliveries">
-      <div class="deliveries_inner">
-        <v-container>
-          <div class="delivery_cards">
-            <div
-              class="single_card"
-              v-for="(delivery, i) in deliveries2"
-              :key="i"
-            >
-              <span class="d_icon" v-html="delivery.svg">
-                {{ delivery.svg }}
-              </span>
-              <h3>{{ delivery.title }}</h3>
-              <p v-html="delivery.detail">
-                {{ delivery.detail }}
-              </p>
-              <span v-html="delivery.svg1" class="d_arraow">
-                {{ delivery.svg1 }}
-              </span>
-            </div>
-          </div>
-        </v-container>
-      </div>
-    </section>
-  </div>
+    </v-container>
+  </section>
 </template>
 
 <script>
@@ -326,8 +294,6 @@ export default {
                   </defs>
                 </svg>`,
         },
-      ],
-      deliveries2: [
         {
           svg: `<svg width="102" height="85" viewBox="0 0 102 85" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 84.051H94.449V8.66699H8.5V84.051Z" fill="#E8EBF7"/>
@@ -488,36 +454,37 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .deliveries {
   padding: 80px 0;
   padding-bottom: 0;
   font-family: "Nunito", sans-serif;
-  .deliveries_inner {
-    max-width: 1100px;
+  .container {
+    padding: 0 !important;
+  }
+  .delivery_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    width: 100%;
     margin: auto;
-    // margin-right: 0;
-    margin-top: 0;
-    background-color: #f27f0b;
-    .container {
-      padding: 0 !important;
-    }
-    .delivery_cards {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    // background-color: red;
+    column-gap: 10px;
+    padding: 80px 20px;
     .single_card {
-      //   background-color: blue;
-
-      margin: 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      max-width: 300px;
+      max-width: 100%;
+      background: #f27f0b;
+      border-radius: 10px;
+      margin-top: 90px;
+
       width: 100%;
       padding-bottom: 30px;
+      @media (max-width: 767px) {
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+      }
       p {
         margin: 0;
         text-align: center;

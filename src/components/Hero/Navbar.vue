@@ -1,6 +1,6 @@
 <template>
   <v-container class="navBar">
-    <v-toolbar flat color="transparent">
+    <v-toolbar flat color="transparent" class="hidden-xs-and-down">
       <v-toolbar-title>
         <span>
           <svg
@@ -35,7 +35,7 @@
         </span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-xs-only">
+      <v-toolbar-items>
         <v-btn text>
           <router-link to="/">Login</router-link>
         </v-btn>
@@ -55,12 +55,15 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      drawer: false,
+      dialog: false,
+    };
   },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 a {
   text-decoration: none;
   // color: #fff;

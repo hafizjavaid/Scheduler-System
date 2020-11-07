@@ -40,7 +40,10 @@
   <div>
     <Hero></Hero>
     <Delievries></Delievries>
-    <C></C>
+    <Clients></Clients>
+    <Truck></Truck>
+    <Benefits></Benefits>
+    <Lugger></Lugger>
   </div>
 </template>
 
@@ -48,7 +51,10 @@
 // import HelloWorld from './components/HelloWorld';
 import Hero from "./components/Hero/Hero";
 import Delievries from "./components/Deliveries";
-import C from "./components/client";
+import Clients from "./components/client";
+import Truck from "./components/Truck";
+import Lugger from "./components/Lugger";
+import Benefits from "./components/Benefits";
 
 export default {
   name: "App",
@@ -57,7 +63,10 @@ export default {
     // HelloWorld,
     Hero,
     Delievries,
-    C,
+    Clients,
+    Truck,
+    Benefits,
+    Lugger,
   },
 
   data: () => ({
@@ -67,5 +76,49 @@ export default {
 </script>
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap");
+#clients .v-carousel__controls {
+  background: none !important;
+  top: 65%;
+  color: #000 !important;
+}
+#clients .theme--dark.v-btn.v-btn--icon {
+  color: #c4c4c4 !important;
+}
+#clients .theme--dark.v-btn.v-btn--icon.v-item--active {
+  color: #000 !important;
+  &::before {
+    background: none !important;
+  }
+}
+#hero {
+  .v-input input {
+    padding: 12px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  i.v-icon.v-icon {
+    color: #f27f0b;
+    margin-top: 7px;
+  }
+  .v-input__slot .v-label {
+    color: #f27f0b !important;
+    margin-bottom: 7px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+  }
+  .v-text-field input {
+    margin-top: 7px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .v-text-field > .v-input__control > .v-input__slot:after {
+    border-color: #f27f0b !important;
+  }
+}
 </style>
 

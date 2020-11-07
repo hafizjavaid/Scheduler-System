@@ -1,16 +1,20 @@
 <template>
-  <section class="hero" v-bind:style="{ backgroundImage: 'url(' + img + ')' }">
+  <section
+    class="hero"
+    id="hero"
+    v-bind:style="{ backgroundImage: 'url(' + img + ')' }"
+  >
     <Navbar></Navbar>
 
     <v-row>
-      <v-col md="6" cols="12" dark>
+      <v-col sm="6" cols="12" dark>
         <h1 color="primary">
           Move <br />
           Anything
         </h1>
         <p>with the push of button</p>
       </v-col>
-      <v-col md="6" cols="12">
+      <v-col sm="6" cols="12">
         <form action="" class="location_form">
           <v-row>
             <v-col>
@@ -47,7 +51,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .hero {
   width: 100%;
   height: 90vh;
@@ -61,7 +65,7 @@ export default {
   font-family: "Nunito", sans-serif;
   z-index: 1;
   padding: 0 30px;
-  @media (max-width: 960px) {
+  @media (max-width: 600px) {
     height: auto;
   }
   &::before {
@@ -81,7 +85,7 @@ form {
   padding: 20px 8px;
   max-width: 285px;
   margin-left: auto;
-  @media (max-width: 960px) {
+  @media (max-width: 600px) {
     margin-left: 0;
     margin-right: auto;
   }
@@ -125,6 +129,9 @@ h1 {
   font-size: 80px;
   line-height: 73px;
   color: #ffffff;
+  @media (max-width: 767px) {
+    font-size: 60px;
+  }
 }
 p {
   font-style: normal;
