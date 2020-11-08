@@ -38,35 +38,18 @@
     </v-main>
   </v-app> -->
   <div>
-    <Hero></Hero>
-    <Delievries></Delievries>
-    <Clients></Clients>
-    <Truck></Truck>
-    <Benefits></Benefits>
-    <Lugger></Lugger>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld';
-import Hero from "./components/Hero/Hero";
-import Delievries from "./components/Deliveries";
-import Clients from "./components/client";
-import Truck from "./components/Truck";
-import Lugger from "./components/Lugger";
-import Benefits from "./components/Benefits";
 
 export default {
   name: "App",
 
   components: {
     // HelloWorld,
-    Hero,
-    Delievries,
-    Clients,
-    Truck,
-    Benefits,
-    Lugger,
   },
 
   data: () => ({
