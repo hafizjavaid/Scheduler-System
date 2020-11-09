@@ -23,23 +23,25 @@ export default {
           date: "1",
         },
         {
-          day: "Monday",
+          day: "Tuesday",
           date: "2",
         },
         {
-          day: "Monday",
+          day: "Wenesday",
           date: "3",
         },
         {
-          day: "Monday",
+          day: "Thursday",
           date: "4",
         },
         {
-          day: "Monday",
+          day: "Friday",
           date: "5",
         },
       ],
       activeDays: [],
+      // If month has 30 days then add +1 mean make them 31 and loop it for -1
+      monthDays: 5 + 1,
     };
   },
   methods: {
