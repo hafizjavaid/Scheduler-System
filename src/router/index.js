@@ -69,7 +69,11 @@ const routes = [
           component: Final
         },
       ]
-  }
+  },
+     {
+    path: '/address',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Delivery.vue'),
+  },
 ]
 
 const router = new VueRouter({
