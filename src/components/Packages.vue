@@ -117,7 +117,9 @@
           </v-list-item>
           <v-list-item>
             <v-list-item-action>
-              <v-btn class="book_btn"> Check Availability</v-btn>
+              <v-btn class="book_btn" @click="checkScedule">
+                Check Availability</v-btn
+              >
             </v-list-item-action>
           </v-list-item>
         </v-list>
@@ -210,6 +212,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    checkScedule() {
+      this.$router.push({ path: "/about/4" });
+    },
   },
 };
 </script>

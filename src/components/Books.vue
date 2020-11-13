@@ -77,7 +77,9 @@
           <img src="@/assets/van.svg" alt="" />
 
           <v-list-item-action>
-            <v-btn depressed class="book_btn"> Book Now</v-btn>
+            <v-btn depressed class="book_btn" @click="bookNow(i + 1)">
+              Book Now</v-btn
+            >
           </v-list-item-action>
         </v-list-item>
       </v-list>
@@ -107,6 +109,13 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    bookNow(i) {
+      this.$router.push({ path: "/about/3" }, { query: { id: i } });
+
+      console.log(this.$route);
+    },
   },
 };
 </script>

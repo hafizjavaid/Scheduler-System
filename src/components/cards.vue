@@ -300,6 +300,7 @@ export default {
   methods: {
     gotoAddress() {
       this.$router.push({ path: "/about/2" });
+      // console.log(this.$route);
     },
   },
 };
