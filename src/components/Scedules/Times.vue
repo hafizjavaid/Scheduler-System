@@ -46,6 +46,9 @@ export default {
   @media (max-width: 400px) {
     grid-template-columns: repeat(2, 1fr);
   }
+  @media (max-width: 350px) {
+    width: 90%;
+  }
   .time {
     padding: 15px;
     background-color: #f2f2f2;

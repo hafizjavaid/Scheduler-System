@@ -1,6 +1,11 @@
 <template>
   <div class="main_cards">
-    <div class="main_card" v-for="(card, i) in cards" :key="i">
+    <div
+      class="main_card"
+      v-for="(card, i) in cards"
+      :key="i"
+      @click="gotoAddress"
+    >
       <span v-html="card.svg">
         {{ card.svg }}
       </span>
@@ -291,6 +296,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    gotoAddress() {
+      this.$router.push({ path: "/about/2" });
+    },
   },
 };
 </script>

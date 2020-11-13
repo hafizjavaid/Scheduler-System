@@ -38,7 +38,7 @@
     </div>
     <div class="address">
       <img src="@/assets/van22.svg" alt="" />
-      <h1>Delivery Address</h1>
+      <h1>Pickup Address</h1>
       <p>
         Where should we deliver your <br />
         moving supplies?
@@ -74,39 +74,12 @@
     </div>
     <div class="address">
       <img src="@/assets/van22.svg" alt="" />
-      <h1>Delivery Address</h1>
-      <p>
+      <h1>Schedule Moving date when your ready</h1>
+      <!-- <p>
         Where should we deliver your <br />
         moving supplies?
-      </p>
-      <v-list>
-        <v-list-item>
-          <v-list-item-avatar>
-            <span>
-              <svg
-                width="18"
-                height="22"
-                viewBox="0 0 18 22"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M9 0C4.02429 0 0 3.82556 0 8.55556C0 14.9722 9 22 9 22C9 22 18 14.9722 18 8.55556C18 3.82556 13.9757 0 9 0ZM9 12.2222C11.1302 12.2222 12.8571 10.5806 12.8571 8.55556C12.8571 6.53052 11.1302 4.88889 9 4.88889C6.86976 4.88889 5.14286 6.53052 5.14286 8.55556C5.14286 10.5806 6.86976 12.2222 9 12.2222Z"
-                  fill="#F1F1F1"
-                />
-              </svg>
-            </span>
-          </v-list-item-avatar>
-
-          <v-list-item-content>
-            <v-list-item-title>
-              Bahawalpur Zoo, Stadium Road, Old City Bahawalpur
-            </v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
+      </p> -->
+      <button class="book_btn" text depressed>Check Availablity</button>
     </div>
   </div>
 </template>
@@ -217,6 +190,27 @@ export default {
         color: #f1f1f1;
       }
     }
+  }
+  .book_btn {
+    background-color: #f27f0b !important;
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: #ffffff;
+    max-width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0 30px;
+    margin: auto;
+    border: 1px solid #f27f0b;
+    box-sizing: border-box;
+    border-radius: 4px;
+    // margin-top: 10px;
   }
 }
 </style>

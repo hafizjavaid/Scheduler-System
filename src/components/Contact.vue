@@ -54,6 +54,10 @@ export default {};
     margin-left: auto;
     margin-right: auto;
   }
+  @media (max-width: 350px) {
+    max-width: 250px;
+    width: 100%;
+  }
   .top {
     display: flex;
     justify-content: space-between;
@@ -68,6 +72,9 @@ export default {};
       line-height: 23px;
 
       color: #545454;
+      @media (max-width: 400px) {
+        font-size: 14px;
+      }
     }
     span {
       margin-top: 5px;
@@ -129,5 +136,8 @@ export default {};
   border: 1px solid #f27f0b;
   box-sizing: border-box;
   border-radius: 4px;
+  @media (max-width: 400px) {
+    max-width: 150px;
+  }
 }
 </style>
