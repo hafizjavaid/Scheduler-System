@@ -70,9 +70,13 @@ const routes = [
         },
       ]
   },
-     {
+    {
     path: '/address',
     component: () => import(/* webpackChunkName: "about" */ '../views/Delivery.vue'),
+  },
+    {
+    path: '/cdashboard',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Cdashboard.vue'),
   },
 ]
 

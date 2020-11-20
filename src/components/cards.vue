@@ -338,6 +338,9 @@ export default {
 
       color: #ffffff;
     }
+    span {
+      cursor: pointer;
+    }
   }
 }
 </style>

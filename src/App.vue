@@ -239,5 +239,65 @@ export default {
     }
   }
 }
+#cdashboard .v-tabs-bar {
+  margin-right: 40px;
+  margin-left: 10px;
+  // background-color: gray;
+  .v-tabs-slider {
+    background-color: #f27f0b;
+    display: none;
+  }
+
+  .v-tab {
+    letter-spacing: 0;
+    color: #000;
+  }
+  .v-tab--active {
+    color: #f27f0b;
+    background-color: #f27f0b;
+    color: #fff !important;
+    font-weight: bold;
+  }
+}
+#cdashboard #d__table .text-left_2 {
+  text-align: center !important;
+  font-size: 17px;
+}
+#cdashboard {
+  #d__table,
+  #p__table {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  td {
+    // color: red;
+    text-align: center !important;
+  }
+  .v-tabs--vertical {
+    align-items: center;
+  }
+  @media (max-width: 670px) {
+    .v-tabs--vertical {
+      display: flex;
+      flex-direction: column;
+    }
+    .v-tabs-bar__content {
+      display: flex;
+      flex-direction: row;
+      // margin: auto;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+  }
+  @media (max-width: 470px) {
+    .v-tabs-bar__content {
+      display: flex;
+      flex-direction: column;
+      // margin: auto;
+      align-items: center;
+    }
+  }
+}
 </style>
 
