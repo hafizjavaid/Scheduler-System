@@ -76,3 +76,18 @@ a {
   font-size: 0.875rem;
 }
 </style>
+
+// .all-journeys::-webkit-scrollbar {
+//   width: 10px;
+// }
+// .all-journeys::-webkit-scrollbar-track {
+//   // background: #ddd;
+// }
+// .sidebar::-webkit-scrollbar-track:hover {
+//   background-color: #ddd;
+// }
+// .all-journeys::-webkit-scrollbar-thumb {
+//   // background-color: var(--scroll);
+//   border-radius: 16px;
+//   background: #ddd;
+// }
